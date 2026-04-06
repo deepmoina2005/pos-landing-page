@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const defaultBaseUrl = import.meta.env.DEV
-  ? 'http://localhost:5000'
+  ? 'http://3.110.197.255:5000'
   : (typeof window !== 'undefined' ? window.location.origin : '');
 
 const API_BASE_URL = (
