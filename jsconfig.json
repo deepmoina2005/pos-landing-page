@@ -5,6 +5,7 @@
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./src/*"]
     },
@@ -14,4 +15,4 @@
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
-}
+}
