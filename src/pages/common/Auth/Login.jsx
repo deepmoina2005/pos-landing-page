@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { login, forgotPassword } from '@/Redux Toolkit/features/auth/authThunk'
 import { getUserProfile } from '@/Redux Toolkit/features/user/userThunks'
 import { ThemeToggle } from '../../../components/theme-toggle'
+import { normalizeRole } from '@/utils/userRole'
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -53,7 +54,7 @@ const Login = () => {
           const userProfile = profileAction.payload
 
           // Only STORE_ADMIN (owner) can login on the public site
-          if (userProfile.role !== 'STORE_ADMIN') {
+          if (normalizeRole(userProfile.role) !== 'STORE_ADMIN') {
             localStorage.removeItem('jwt')
             toast({
               title: 'Access Denied',

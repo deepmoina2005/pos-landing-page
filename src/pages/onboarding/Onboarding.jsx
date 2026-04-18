@@ -11,6 +11,7 @@ import { useNavigate, useLocation } from 'react-router';
 import { ThemeToggle } from '../../components/theme-toggle';
 import { CheckCircle2, Store, User, Mail, ArrowRight, Award } from 'lucide-react';
 import { Button } from '../../components/ui/button';
+import { normalizeRole } from '../../utils/userRole';
 
 const Onboarding = () => {
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ const Onboarding = () => {
         try {
           const userRes = await dispatch(getUserProfile(jwt)).unwrap();
 
-          if (userRes && userRes.role === 'STORE_ADMIN') {
+          if (userRes && normalizeRole(userRes.role) === 'STORE_ADMIN') {
             try {
               const storeRes = await dispatch(getStoreByAdmin(jwt)).unwrap();
 

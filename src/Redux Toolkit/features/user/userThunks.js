@@ -33,7 +33,7 @@ export const getCustomers = createAsyncThunk('user/getCustomers', async (token, 
 // 🔹 Get all cashiers
 export const getCashiers = createAsyncThunk('user/getCashiers', async (token, { rejectWithValue }) => {
   try {
-    const res = await api.get('/api/users?role=BRANCH_CASHIER', {
+    const res = await api.get('/api/users?role=CASHIER', {
       headers: { Authorization: `Bearer ${token}` },
     });
     console.log('Get cashiers success:', res.data);
