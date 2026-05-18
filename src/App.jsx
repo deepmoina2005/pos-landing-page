@@ -8,7 +8,6 @@ import DesktopApp from './pages/DesktopApp';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Solution from './pages/Solution';
-import MobileApp from './pages/MobileApp';
 import { getUserProfile } from './Redux Toolkit/features/user/userThunks';
 
 const App = () => {
@@ -29,7 +28,6 @@ const App = () => {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/about" element={<About />} />
       <Route path="/solution" element={<Solution />} />
-      <Route path="/mobile" element={<MobileApp />} />
       <Route path="/auth/*" element={<AuthRoutes />} />
       <Route path="/404" element={<PageNotFound />} />
       <Route path="*" element={<Navigate to="/404" replace />} />

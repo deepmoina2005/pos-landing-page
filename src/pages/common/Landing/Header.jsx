@@ -83,8 +83,7 @@ const Header = () => {
                         <button onClick={() => navigate('/pricing')} className="text-muted-foreground cursor-pointer hover:text-primary transition-colors py-2">Pricing</button>
                         <button onClick={() => navigate('/about')} className="text-muted-foreground cursor-pointer hover:text-primary transition-colors py-2">About Us</button>
                         <button onClick={() => navigate('/solution')} className="text-muted-foreground cursor-pointer hover:text-primary transition-colors py-2">Solution</button>
-                        <button onClick={() => navigate('/mobile')} className="flex items-center gap-1.5 text-muted-foreground cursor-pointer hover:text-primary transition-colors py-2"><Smartphone className="w-4 h-4" />Mobile App</button>
-                        <button onClick={() => navigate('/desktop')} className="flex items-center gap-1.5 text-muted-foreground cursor-pointer hover:text-primary transition-colors py-2"><Monitor className="w-4 h-4" />Desktop App</button>
+                        <button onClick={() => navigate('/desktop')} className="flex items-center gap-1.5 text-muted-foreground cursor-pointer hover:text-primary transition-colors py-2"><Monitor className="w-4 h-4" />Desktop</button>
                     </nav>
 
                     {/* Right Side: CTA or Profile */}
